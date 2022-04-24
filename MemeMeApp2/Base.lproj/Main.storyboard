@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k39-Nm-pnV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NZ6-uH-wqC">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Sent Memes-->
         <scene sceneID="vhI-gI-4zr">
             <objects>
                 <tableViewController id="h42-PZ-QFV" sceneMemberID="viewController">
@@ -30,13 +30,13 @@
                             <outlet property="delegate" destination="h42-PZ-QFV" id="27H-Rb-k3H"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="gBL-Ri-Xf1"/>
+                    <navigationItem key="navigationItem" title="Sent Memes" id="gBL-Ri-Xf1"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rKx-zr-Scz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="848" y="-374"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Sent Memes-->
         <scene sceneID="EYd-zw-IoE">
             <objects>
                 <tableViewController id="5vF-oH-U5W" sceneMemberID="viewController">
@@ -59,7 +59,7 @@
                             <outlet property="delegate" destination="5vF-oH-U5W" id="vWB-J1-D3w"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="EdI-Zr-PX9"/>
+                    <navigationItem key="navigationItem" title="Sent Memes" id="EdI-Zr-PX9"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TJh-Za-05d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,11 +83,11 @@
             </objects>
             <point key="canvasLocation" x="-1545" y="-57"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="YLJ-Se-tuz">
             <objects>
                 <navigationController id="S7g-CP-CMb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="gtd-Al-hhN"/>
+                    <tabBarItem key="tabBarItem" title="" image="square.grid.3x3.fill" catalog="system" id="gtd-Al-hhN"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qA1-rD-oI1">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -100,11 +100,11 @@
             </objects>
             <point key="canvasLocation" x="-317" y="445"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="IpX-e3-QkI">
             <objects>
                 <navigationController id="k39-Nm-pnV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="TRP-Rg-ndk"/>
+                    <tabBarItem key="tabBarItem" title="" image="list.dash" catalog="system" id="TRP-Rg-ndk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oeR-BG-wZS">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -119,6 +119,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="square.grid.3x3.fill" catalog="system" width="128" height="112"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
