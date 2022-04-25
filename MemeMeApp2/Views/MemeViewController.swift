@@ -118,7 +118,9 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         memes.append(meme)
         
+        print("saveBtnClicked", memes.getMemes().count)
         unwind()
+        
         
     }
     @IBAction func imageCaptureBtnPressed(_ sender: UIBarButtonItem) {

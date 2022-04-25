@@ -11,10 +11,12 @@ import UIKit
 class TableViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    
     var memes = Memes.shared
     
     @IBAction func unwindToTableView(_ unwindSegue: UIStoryboardSegue) {
-        print("unwound")
+        print("unwound", memes.getMemes().count)
+        tableView.reloadData()
     }
 }
     

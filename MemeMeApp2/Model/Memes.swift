@@ -21,14 +21,14 @@ struct MemeListEntry {
         self.meme = meme
     }
 }
-struct Memes {
+class Memes {
     
     static let shared = Memes()
     
     private var memes: [MemeListEntry] = []
     private static var singleton: Memes?
     
-    mutating func append(_ meme: Meme) {
+    func append(_ meme: Meme) {
         memes.append(MemeListEntry( meme))
     }
     
@@ -36,7 +36,7 @@ struct Memes {
         return memes
     }
     
-    mutating func removeMeme(entry: MemeListEntry) {
+    func removeMeme(entry: MemeListEntry) {
         memes = memes.filter({ e in
             e.id != entry.id
         })
