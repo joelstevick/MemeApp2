@@ -34,6 +34,8 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     ]
     var meme = Meme()
     
+    var memes = Memes.shared
+    
     // MARK: - Lifecycle methods
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -108,6 +110,8 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         _ = meme.build(view, navigationController)
         
         meme.save()
+        
+        memes.append(meme)
         
         dismiss(animated: true)
     }

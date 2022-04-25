@@ -28,7 +28,7 @@ struct Memes {
     private var memes: [MemeListEntry] = []
     private static var singleton: Memes?
     
-    mutating func add(_ meme: Meme) {
+    mutating func append(_ meme: Meme) {
         memes.append(MemeListEntry( meme))
     }
     
