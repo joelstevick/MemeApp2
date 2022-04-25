@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -85,12 +86,20 @@
                                 </items>
                                 <toolbarAppearance key="standardAppearance"/>
                             </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uR0-PT-Ini">
+                                <rect key="frame" x="0.0" y="132" width="414" height="764"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VV4-DN-bOu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7Vd-tV-HaK" firstAttribute="top" secondItem="VV4-DN-bOu" secondAttribute="top" id="4zg-0g-IxO"/>
+                            <constraint firstAttribute="trailing" secondItem="uR0-PT-Ini" secondAttribute="trailing" id="8W2-eo-6g4"/>
+                            <constraint firstItem="uR0-PT-Ini" firstAttribute="top" secondItem="7Vd-tV-HaK" secondAttribute="bottom" id="B6A-QB-Hsu"/>
                             <constraint firstAttribute="trailing" secondItem="7Vd-tV-HaK" secondAttribute="trailing" id="BzO-mI-cmE"/>
+                            <constraint firstAttribute="bottom" secondItem="uR0-PT-Ini" secondAttribute="bottom" id="DqJ-kU-tgY"/>
+                            <constraint firstItem="uR0-PT-Ini" firstAttribute="leading" secondItem="VV4-DN-bOu" secondAttribute="leading" id="Jy3-pJ-Wuh"/>
                             <constraint firstItem="7Vd-tV-HaK" firstAttribute="leading" secondItem="4mg-ys-aH7" secondAttribute="leading" id="OsI-hr-H9C"/>
                         </constraints>
                     </view>
@@ -98,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ewy-12-wRA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="778" y="-374"/>
+            <point key="canvasLocation" x="776.81159420289862" y="-374.33035714285711"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Not-CS-0Lp">
@@ -117,16 +126,44 @@
                                         <color key="tintColor" systemColor="labelColor"/>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="GiD-Qq-Ba5"/>
-                                    <barButtonItem title="+" image="plus" catalog="system" id="T2Z-2V-XY4"/>
+                                    <barButtonItem title="+" image="plus" catalog="system" id="T2Z-2V-XY4">
+                                        <connections>
+                                            <segue destination="UYj-xq-Tha" kind="presentation" id="b0y-K9-fJe"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1kP-2P-W4r">
+                                <rect key="frame" x="0.0" y="132" width="414" height="681"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jij-sT-bnV">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hr5-Gn-GAD">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7pd-TJ-OqJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dbx-kA-jWD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="sd9-Eu-Oth" firstAttribute="top" secondItem="dbx-kA-jWD" secondAttribute="top" id="3HL-W4-NRz"/>
+                            <constraint firstItem="1kP-2P-W4r" firstAttribute="leading" secondItem="dbx-kA-jWD" secondAttribute="leading" id="DD9-9S-oSG"/>
                             <constraint firstAttribute="trailing" secondItem="sd9-Eu-Oth" secondAttribute="trailing" id="MZd-oC-sHm"/>
+                            <constraint firstItem="1kP-2P-W4r" firstAttribute="top" secondItem="sd9-Eu-Oth" secondAttribute="bottom" id="X2D-1V-Jha"/>
+                            <constraint firstItem="dbx-kA-jWD" firstAttribute="bottom" secondItem="1kP-2P-W4r" secondAttribute="bottom" id="bj6-qz-Hiw"/>
                             <constraint firstItem="sd9-Eu-Oth" firstAttribute="leading" secondItem="tXk-2S-6l3" secondAttribute="leading" id="u0a-yZ-La9"/>
+                            <constraint firstItem="dbx-kA-jWD" firstAttribute="trailing" secondItem="1kP-2P-W4r" secondAttribute="trailing" id="yri-Cr-awA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="B70-qW-OLb"/>
@@ -240,9 +277,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wSw-oK-CrX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1569.5652173913045" y="-374.33035714285711"/>
+            <point key="canvasLocation" x="1699" y="94"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="b0y-K9-fJe"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
