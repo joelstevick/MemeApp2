@@ -74,4 +74,13 @@ struct Meme {
     func save() {
         UIImageWriteToSavedPhotosAlbum(memedImage!, nil, nil, nil)
     }
+    
+    func getTile() -> String {
+        
+        return "\(String(describing: topTextField)) | \(String(describing: bottomTextField))"
+    }
+    
+    func getImage() -> UIImage {
+        return memedImage!
+    }
 }
