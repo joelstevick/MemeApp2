@@ -11,6 +11,7 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate {
     
     // MARK: -
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("numberOfRows", self.memes.getMemes().count)
         return self.memes.getMemes().count
     }
     

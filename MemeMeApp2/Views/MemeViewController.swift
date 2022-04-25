@@ -18,8 +18,6 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var saveBtn: UIBarButtonItem!
     
     // MARK: - Properties
-    var tableView: UITableView?
-    var collectionView: UICollectionView?
     
     let pickerController = UIImagePickerController()
     
@@ -64,14 +62,6 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         super.viewWillDisappear(animated)
         unsubscribeToKeyboardNotifications()
         
-        // sync parent views
-        if let tableView = tableView {
-            tableView.reloadData()
-        }
-        
-        if let collectionView = collectionView {
-            collectionView.reloadData()
-        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
