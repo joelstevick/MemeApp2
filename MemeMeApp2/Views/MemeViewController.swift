@@ -64,6 +64,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         super.viewWillDisappear(animated)
         unsubscribeToKeyboardNotifications()
         
+        print(tableView)
         // sync parent views
         if let tableView = tableView {
             tableView.reloadData()

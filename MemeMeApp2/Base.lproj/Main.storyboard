@@ -80,7 +80,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ehc-eF-9LI"/>
                                     <barButtonItem title="+" image="plus" catalog="system" id="Rbs-4P-bFQ">
                                         <connections>
-                                            <segue destination="UYj-xq-Tha" kind="presentation" id="bDd-09-nKl"/>
+                                            <segue destination="UYj-xq-Tha" kind="presentation" identifier="MemeVC" id="bDd-09-nKl"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -114,6 +114,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Cc6-Dj-V1e"/>
+                    <connections>
+                        <outlet property="tableView" destination="uR0-PT-Ini" id="eAs-cy-vow"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ewy-12-wRA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
