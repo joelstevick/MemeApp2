@@ -17,15 +17,16 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MemeCell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MemeCell") as? MemeCellTableViewCell
         let entry = self.memes.getMemes()[(indexPath as NSIndexPath).row]
         
         // Set the name and image
-        cell.textLabel?.text = entry.meme.getTile()
-        cell.imageView?.image = entry.meme.getImage()
-        print("cellForRowAt", cell, entry)
+        cell!.toplabel!.text = entry.meme.getTopText()
+        cell!.bottomLabel!.text = entry.meme.getBottomText()
+        cell!.imageView!.image = entry.meme.getOriginalImage()
+      
         
-        return cell
+        return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

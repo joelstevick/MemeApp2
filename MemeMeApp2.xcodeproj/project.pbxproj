@@ -19,6 +19,7 @@
 		93D66BE12817281B00C4E142 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D66BE02817281B00C4E142 /* TableViewController.swift */; };
 		93D66BE3281728E300C4E142 /* TableViewContoller+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D66BE2281728E300C4E142 /* TableViewContoller+UITableViewDataSource.swift */; };
 		93D66BE528173FCF00C4E142 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D66BE428173FCF00C4E142 /* CollectionViewController.swift */; };
+		93D66BE7281762B400C4E142 /* MemeCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D66BE6281762B400C4E142 /* MemeCellTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		93D66BE02817281B00C4E142 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		93D66BE2281728E300C4E142 /* TableViewContoller+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewContoller+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		93D66BE428173FCF00C4E142 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		93D66BE6281762B400C4E142 /* MemeCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCellTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				93D66BE02817281B00C4E142 /* TableViewController.swift */,
 				93D66BE2281728E300C4E142 /* TableViewContoller+UITableViewDataSource.swift */,
 				93D66BE428173FCF00C4E142 /* CollectionViewController.swift */,
+				93D66BE6281762B400C4E142 /* MemeCellTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				93D66BE12817281B00C4E142 /* TableViewController.swift in Sources */,
 				93D66BDF28171BCD00C4E142 /* Memes.swift in Sources */,
 				93D66BDD2817027800C4E142 /* MemeViewController+UIImagePickerControllerDelegate.swift in Sources */,
+				93D66BE7281762B400C4E142 /* MemeCellTableViewCell.swift in Sources */,
 				93D66BDB2817024800C4E142 /* Meme.swift in Sources */,
 				93D66BE3281728E300C4E142 /* TableViewContoller+UITableViewDataSource.swift in Sources */,
 				9305D439281609000008766F /* AppDelegate.swift in Sources */,

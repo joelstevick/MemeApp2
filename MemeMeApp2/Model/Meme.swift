@@ -75,12 +75,20 @@ struct Meme {
         UIImageWriteToSavedPhotosAlbum(memedImage!, nil, nil, nil)
     }
     
-    func getTile() -> String {
+    func getTopText() -> String {
         
-        return topTextField! + " | " + bottomTextField!
+        return topTextField!
+    }
+    
+    func getBottomText() -> String {
+        return bottomTextField!
     }
     
     func getImage() -> UIImage {
         return memedImage!
+    }
+    
+    func getOriginalImage() -> UIImage {
+        return originalImage!
     }
 }
