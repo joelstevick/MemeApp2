@@ -96,6 +96,9 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                                             Bool, arrayReturnedItems: [Any]?, error: Error?) in
             if completed {
                 self.meme.save()
+                
+                self.memes.append(meme)
+                
                 return
             }
             if let shareError = error {

@@ -19,8 +19,6 @@ extension MemeViewController {
         
         meme.addOriginalImage(imagePickerView.image!)
         
-        memes.append(meme)
-        
         updateModel()
     }
 }
