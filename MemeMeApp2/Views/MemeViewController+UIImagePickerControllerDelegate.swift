@@ -21,6 +21,6 @@ extension MemeViewController {
         
         memes.append(meme)
         
-        dismiss(animated: true)
+        updateModel()
     }
 }
