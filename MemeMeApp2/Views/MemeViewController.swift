@@ -13,7 +13,9 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var topText: UITextField!
     @IBOutlet weak var bottomText: UITextField!
     @IBOutlet weak var cameraBtn: UIBarButtonItem!
+    @IBOutlet weak var shareBtn: UIBarButtonItem!
     @IBOutlet weak var imagePickerView: UIImageView!
+    @IBOutlet weak var saveBtn: UIBarButtonItem!
     
     // MARK: - Properties
     let pickerController = UIImagePickerController()
@@ -37,6 +39,10 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         super.viewDidAppear(animated)
         
         cameraBtn.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
+        
+        saveBtn.isEnabled = false
+        shareBtn.isEnabled = false
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -75,6 +81,8 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             meme.addBottomTextField(text)
         }
         
+        saveBtn.isEnabled = meme.isValid()
+        shareBtn.isEnabled = meme.isValid()
     }
     // MARK: - Actions
     @IBAction func sharePressed(_ sender: Any) {
@@ -96,6 +104,12 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
     }
     
+    @IBAction func saveBtnClicked(_ sender: UIBarButtonItem) {
+        
+        meme.save()
+        
+        dismiss(animated: true)
+    }
     @IBAction func imageCaptureBtnPressed(_ sender: UIBarButtonItem) {
         if sender.tag == cameraBtnTag {
             pickerController.sourceType = .camera
@@ -105,7 +119,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
        
         present(pickerController, animated: true, completion: nil)
     }
-    @IBAction func cancelPressed(_ sender: Any) {        
+    @IBAction func cancelPressed(_ sender: Any) {
         dismiss(animated: true)
     }
     

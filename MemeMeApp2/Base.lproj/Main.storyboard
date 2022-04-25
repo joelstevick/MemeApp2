@@ -163,9 +163,15 @@
                                 <items>
                                     <barButtonItem title="Share Btn" image="square.and.arrow.up" catalog="system" id="STb-7c-oRQ"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="jle-qt-ZsD"/>
+                                    <barButtonItem title="Save" id="Zh8-aP-qCS">
+                                        <connections>
+                                            <action selector="saveBtnClicked:" destination="UYj-xq-Tha" id="sTg-tQ-amB"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ATH-18-pTg"/>
                                     <barButtonItem title="Cancel" style="plain" id="yh2-db-Wab">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="IbE-4x-4o1">
-                                            <rect key="frame" x="319" y="5" width="75" height="34.5"/>
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="IbE-4x-4o1">
+                                            <rect key="frame" x="317.5" y="5" width="76.5" height="34.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
@@ -223,6 +229,8 @@
                         <outlet property="bottomText" destination="kwt-jA-f1h" id="atZ-s2-Dve"/>
                         <outlet property="cameraBtn" destination="61I-dO-cvk" id="R8v-i4-mMq"/>
                         <outlet property="imagePickerView" destination="GZY-MC-M0L" id="Eet-0U-k57"/>
+                        <outlet property="saveBtn" destination="Zh8-aP-qCS" id="1WT-Ph-0I6"/>
+                        <outlet property="shareBtn" destination="STb-7c-oRQ" id="KJR-nG-czV"/>
                         <outlet property="topText" destination="IES-jc-Pt3" id="jCJ-cu-vqe"/>
                     </connections>
                 </viewController>
