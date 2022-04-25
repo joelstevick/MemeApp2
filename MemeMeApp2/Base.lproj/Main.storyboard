@@ -144,22 +144,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GZY-MC-M0L">
-                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="793"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IES-jc-Pt3" userLabel="Top Text">
-                                <rect key="frame" x="40" y="64" width="334" height="34"/>
+                                <rect key="frame" x="40" y="20" width="334" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kwt-jA-f1h" userLabel="Bottom Text">
-                                <rect key="frame" x="40" y="744" width="334" height="34"/>
+                                <rect key="frame" x="40" y="690" width="334" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QZl-yc-yxJ" userLabel="Bottom Toolbar">
-                                <rect key="frame" x="0.0" y="798" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="744" width="414" height="49"/>
                                 <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Sfa-K4-7VJ"/>
                                     <barButtonItem title="Camera" image="camera.fill" catalog="system" id="61I-dO-cvk"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="xvt-zl-UjS"/>
+                                    <barButtonItem title="Album" id="CdC-Q8-GOc" userLabel="Album Btn"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="QRS-oR-ZmR"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -181,6 +185,8 @@
                             <constraint firstItem="igo-Pt-hB3" firstAttribute="trailing" secondItem="IES-jc-Pt3" secondAttribute="trailing" constant="40" id="zpw-7y-fmI"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="bottomText" destination="kwt-jA-f1h" id="atZ-s2-Dve"/>
                         <outlet property="cameraBtn" destination="61I-dO-cvk" id="R8v-i4-mMq"/>
