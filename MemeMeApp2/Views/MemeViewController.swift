@@ -97,7 +97,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             if completed {
                 self.meme.save()
                 
-                self.memes.append(meme)
+                self.memes.append(self.meme)
                 
                 self.dismiss(animated: true)
                 
