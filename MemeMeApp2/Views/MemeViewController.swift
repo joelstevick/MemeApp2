@@ -105,13 +105,8 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
        
         present(pickerController, animated: true, completion: nil)
     }
-    @IBAction func cancelPressed(_ sender: Any) {
-        view.endEditing(true)
-        meme.reset()
-        updateModel()
-        topText.text = ""
-        bottomText.text = ""
-        imagePickerView.image = nil
+    @IBAction func cancelPressed(_ sender: Any) {        
+        dismiss(animated: true)
     }
     
     // MARK: - Keyboard adjustments
