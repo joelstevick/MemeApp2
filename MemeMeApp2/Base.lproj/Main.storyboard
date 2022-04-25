@@ -122,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="776.81159420289862" y="-374.33035714285711"/>
         </scene>
-        <!--View Controller-->
+        <!--Collection View Controller-->
         <scene sceneID="Not-CS-0Lp">
             <objects>
-                <viewController id="Iyp-hp-7lc" sceneMemberID="viewController">
+                <viewController id="Iyp-hp-7lc" customClass="CollectionViewController" customModule="MemeMeApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tXk-2S-6l3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -294,7 +294,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bDd-09-nKl"/>
+        <segue reference="b0y-K9-fJe"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="94"/>

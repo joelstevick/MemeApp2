@@ -18,6 +18,7 @@
 		93D66BDF28171BCD00C4E142 /* Memes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D66BDE28171BCD00C4E142 /* Memes.swift */; };
 		93D66BE12817281B00C4E142 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D66BE02817281B00C4E142 /* TableViewController.swift */; };
 		93D66BE3281728E300C4E142 /* TableViewContoller+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D66BE2281728E300C4E142 /* TableViewContoller+UITableViewDataSource.swift */; };
+		93D66BE528173FCF00C4E142 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D66BE428173FCF00C4E142 /* CollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		93D66BDE28171BCD00C4E142 /* Memes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memes.swift; sourceTree = "<group>"; };
 		93D66BE02817281B00C4E142 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		93D66BE2281728E300C4E142 /* TableViewContoller+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewContoller+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		93D66BE428173FCF00C4E142 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				93D66BDC2817027800C4E142 /* MemeViewController+UIImagePickerControllerDelegate.swift */,
 				93D66BE02817281B00C4E142 /* TableViewController.swift */,
 				93D66BE2281728E300C4E142 /* TableViewContoller+UITableViewDataSource.swift */,
+				93D66BE428173FCF00C4E142 /* CollectionViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93D66BE528173FCF00C4E142 /* CollectionViewController.swift in Sources */,
 				9305D43D281609000008766F /* MemeViewController.swift in Sources */,
 				93D66BE12817281B00C4E142 /* TableViewController.swift in Sources */,
 				93D66BDF28171BCD00C4E142 /* Memes.swift in Sources */,

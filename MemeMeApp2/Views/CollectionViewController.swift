@@ -1,20 +1,18 @@
 //
-//  TableViewController.swift
+//  CollectionViewController.swift
 //  MemeMeApp2
 //
 //  Created by Joel Stevick on 4/25/22.
 //
 
-
 import UIKit
 
-class TableViewController: UIViewController {
+class CollectionViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var memes = Memes.shared
     
-    @IBAction func unwindToTableView(unwindSegue: UIStoryboardSegue) {
+    @IBAction func unwindToCollectionView(unwindSegue: UIStoryboardSegue) {
         
     }
 }
-    
