@@ -18,6 +18,9 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var saveBtn: UIBarButtonItem!
     
     // MARK: - Properties
+    var tableView: UITableView?
+    var collectionView: UICollectionView?
+    
     let pickerController = UIImagePickerController()
     
     var adjustForKeyboard = false
@@ -60,6 +63,15 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         unsubscribeToKeyboardNotifications()
+        
+        // sync parent views
+        if let tableView = tableView {
+            tableView.reloadData()
+        }
+        
+        if let collectionView = collectionView {
+            collectionView.reloadData()
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,6 +112,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 self.memes.append(self.meme)
                 
                 self.dismiss(animated: true)
+                
                 
                 return
             }
