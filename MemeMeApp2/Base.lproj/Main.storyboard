@@ -73,8 +73,13 @@
                                 <items>
                                     <barButtonItem title="Edit" id="mHN-QX-XeE"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="p3m-Dj-ohJ"/>
+                                    <barButtonItem title="Sent Memes" style="plain" id="4aV-hH-28w">
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ehc-eF-9LI"/>
                                     <barButtonItem title="+" image="plus" catalog="system" id="Rbs-4P-bFQ"/>
                                 </items>
+                                <toolbarAppearance key="standardAppearance"/>
                             </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VV4-DN-bOu"/>
@@ -103,6 +108,10 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="44"/>
                                 <items>
                                     <barButtonItem title="Edit" id="1a2-TY-aZN"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="wR9-bL-wZN"/>
+                                    <barButtonItem title="Sent Memes" style="plain" id="bF9-lf-kVm">
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="GiD-Qq-Ba5"/>
                                     <barButtonItem title="+" image="plus" catalog="system" id="T2Z-2V-XY4"/>
                                 </items>
@@ -127,6 +136,9 @@
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="square.grid.3x3.fill" catalog="system" width="128" height="112"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
