@@ -99,6 +99,8 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 
                 self.memes.append(meme)
                 
+                self.dismiss(animated: true)
+                
                 return
             }
             if let shareError = error {
