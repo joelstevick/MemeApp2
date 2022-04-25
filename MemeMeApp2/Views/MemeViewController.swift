@@ -105,6 +105,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     @IBAction func saveBtnClicked(_ sender: UIBarButtonItem) {
+        _ = meme.build(view, navigationController)
         
         meme.save()
         
