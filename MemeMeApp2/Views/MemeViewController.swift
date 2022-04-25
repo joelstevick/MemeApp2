@@ -100,10 +100,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 self.meme.save()
                 
                 self.memes.append(self.meme)
-                
-                self.dismiss(animated: true)
-                
-                
+                self.unwind()
                 return
             }
             if let shareError = error {
@@ -121,7 +118,8 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         memes.append(meme)
         
-        dismiss(animated: true)
+        unwind()
+        
     }
     @IBAction func imageCaptureBtnPressed(_ sender: UIBarButtonItem) {
         if sender.tag == cameraBtnTag {
@@ -133,7 +131,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         present(pickerController, animated: true, completion: nil)
     }
     @IBAction func cancelPressed(_ sender: Any) {
-        dismiss(animated: true)
+        unwind()
     }
     
     // MARK: - Keyboard adjustments
@@ -170,6 +168,12 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 
     }
 
+    func unwind() {
+        
+        performSegue(withIdentifier: "unwindToTableView", sender: self)
+        performSegue(withIdentifier: "unwindToCollectionView", sender: self)
+      
+    }
 
 
 }

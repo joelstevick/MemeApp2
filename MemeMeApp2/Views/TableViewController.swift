@@ -13,8 +13,8 @@ class TableViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var memes = Memes.shared
     
-    @IBAction func unwindToTableView(unwindSegue: UIStoryboardSegue) {
-        
+    @IBAction func unwindToTableView(_ unwindSegue: UIStoryboardSegue) {
+        print("unwound")
     }
 }
     

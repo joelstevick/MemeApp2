@@ -12,7 +12,7 @@ class CollectionViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var memes = Memes.shared
     
-    @IBAction func unwindToCollectionView(unwindSegue: UIStoryboardSegue) {
+    @IBAction func unwindToCollectionView(_ unwindSegue: UIStoryboardSegue) {
         
     }
 }

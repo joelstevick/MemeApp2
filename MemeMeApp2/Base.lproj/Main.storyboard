@@ -286,9 +286,12 @@
                         <outlet property="saveBtn" destination="Zh8-aP-qCS" id="1WT-Ph-0I6"/>
                         <outlet property="shareBtn" destination="STb-7c-oRQ" id="KJR-nG-czV"/>
                         <outlet property="topText" destination="IES-jc-Pt3" id="jCJ-cu-vqe"/>
+                        <segue destination="spL-RS-keY" kind="unwind" identifier="unwindToCollectionView" unwindAction="unwindToCollectionView:" id="bdV-KC-Mtd"/>
+                        <segue destination="spL-RS-keY" kind="unwind" identifier="unwindToTableView" unwindAction="unwindToTableView:" id="0Ze-N5-asD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wSw-oK-CrX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="spL-RS-keY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1699" y="94"/>
         </scene>
