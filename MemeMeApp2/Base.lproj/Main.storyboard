@@ -161,7 +161,11 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zfj-0W-aFQ" userLabel="Top Toolbar">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <items>
-                                    <barButtonItem title="Share Btn" image="square.and.arrow.up" catalog="system" id="STb-7c-oRQ"/>
+                                    <barButtonItem title="Share Btn" image="square.and.arrow.up" catalog="system" id="STb-7c-oRQ">
+                                        <connections>
+                                            <action selector="sharePressed:" destination="UYj-xq-Tha" id="hXo-ao-8it"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="jle-qt-ZsD"/>
                                     <barButtonItem title="Save" id="Zh8-aP-qCS">
                                         <connections>
@@ -170,7 +174,7 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ATH-18-pTg"/>
                                     <barButtonItem title="Cancel" style="plain" id="yh2-db-Wab">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="IbE-4x-4o1">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="IbE-4x-4o1">
                                             <rect key="frame" x="317.5" y="5" width="76.5" height="34.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Button"/>
