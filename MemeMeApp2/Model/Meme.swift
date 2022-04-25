@@ -77,7 +77,7 @@ struct Meme {
     
     func getTile() -> String {
         
-        return "\(String(describing: topTextField)) | \(String(describing: bottomTextField))"
+        return topTextField! + " | " + bottomTextField!
     }
     
     func getImage() -> UIImage {

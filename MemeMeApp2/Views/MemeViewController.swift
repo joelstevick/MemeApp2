@@ -118,7 +118,6 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         memes.append(meme)
         
-        print("saveBtnClicked", memes.getMemes().count)
         unwind()
         
         
@@ -173,7 +172,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     func unwind() {
         
         performSegue(withIdentifier: "unwindToTableView", sender: self)
-        performSegue(withIdentifier: "unwindToCollectionView", sender: self)
+//        performSegue(withIdentifier: "unwindToCollectionView", sender: self)
       
     }
 

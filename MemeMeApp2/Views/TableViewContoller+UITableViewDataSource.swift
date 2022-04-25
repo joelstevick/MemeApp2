@@ -11,7 +11,7 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate {
     
     // MARK: -
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("numberOfRows", self.memes.getMemes().count)
+   
         return self.memes.getMemes().count
     }
     
@@ -23,7 +23,7 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate {
         // Set the name and image
         cell.textLabel?.text = entry.meme.getTile()
         cell.imageView?.image = entry.meme.getImage()
-        
+        print("cellForRowAt", cell, entry)
         
         return cell
     }
