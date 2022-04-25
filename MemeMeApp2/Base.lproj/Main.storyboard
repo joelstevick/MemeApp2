@@ -144,7 +144,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="GiD-Qq-Ba5"/>
                                     <barButtonItem title="+" image="plus" catalog="system" id="T2Z-2V-XY4">
                                         <connections>
-                                            <segue destination="UYj-xq-Tha" kind="presentation" id="b0y-K9-fJe"/>
+                                            <segue destination="UYj-xq-Tha" kind="presentation" identifier="MemeVC" id="b0y-K9-fJe"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>

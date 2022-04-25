@@ -19,6 +19,8 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     // MARK: - Properties
     
+    var unwindTarget: String?
+    
     let pickerController = UIImagePickerController()
     
     var adjustForKeyboard = false
@@ -171,8 +173,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 
     func unwind() {
         
-        performSegue(withIdentifier: "unwindToTableView", sender: self)
-//        performSegue(withIdentifier: "unwindToCollectionView", sender: self)
+        performSegue(withIdentifier: unwindTarget!, sender: self)
       
     }
 

@@ -10,13 +10,23 @@ import UIKit
 
 class TableViewController: UIViewController {
     
+    // MARK: - Properties
     @IBOutlet weak var tableView: UITableView!
     
     var memes = Memes.shared
     
+    // MARK: - Lifecycle methods
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "MemeVC" {
+            let vc = segue.destination as! MemeViewController
+            vc.unwindTarget = "unwindToTableView"
+        }
+    }
+
+    // MARK: - Actions
     @IBAction func unwindToTableView(_ unwindSegue: UIStoryboardSegue) {
-        print("unwound", memes.getMemes().count)
         tableView.reloadData()
     }
+    
 }
     
