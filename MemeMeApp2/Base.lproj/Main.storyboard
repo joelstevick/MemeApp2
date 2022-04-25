@@ -147,12 +147,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="793"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IES-jc-Pt3" userLabel="Top Text">
-                                <rect key="frame" x="40" y="60" width="334" height="34"/>
+                                <rect key="frame" x="40" y="120" width="334" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kwt-jA-f1h" userLabel="Bottom Text">
-                                <rect key="frame" x="40" y="690" width="334" height="34"/>
+                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kwt-jA-f1h" userLabel="Bottom Text">
+                                <rect key="frame" x="40" y="590" width="334" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -178,9 +180,17 @@
                                 <rect key="frame" x="0.0" y="744" width="414" height="49"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Sfa-K4-7VJ"/>
-                                    <barButtonItem title="Camera" image="camera.fill" catalog="system" id="61I-dO-cvk"/>
+                                    <barButtonItem tag="2" title="Camera" image="camera.fill" catalog="system" id="61I-dO-cvk">
+                                        <connections>
+                                            <action selector="imageCaptureBtnPressed:" destination="UYj-xq-Tha" id="2Jh-2H-j67"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="xvt-zl-UjS"/>
-                                    <barButtonItem title="Album" id="CdC-Q8-GOc" userLabel="Album Btn"/>
+                                    <barButtonItem title="Album" id="CdC-Q8-GOc" userLabel="Album Btn">
+                                        <connections>
+                                            <action selector="imageCaptureBtnPressed:" destination="UYj-xq-Tha" id="Sb0-tW-Rg3"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="QRS-oR-ZmR"/>
                                 </items>
                             </toolbar>
@@ -188,15 +198,15 @@
                         <viewLayoutGuide key="safeArea" id="igo-Pt-hB3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="IES-jc-Pt3" firstAttribute="top" secondItem="igo-Pt-hB3" secondAttribute="top" constant="60" id="5Nb-qe-WuU"/>
+                            <constraint firstItem="IES-jc-Pt3" firstAttribute="top" secondItem="igo-Pt-hB3" secondAttribute="top" constant="120" id="5Nb-qe-WuU"/>
                             <constraint firstItem="IES-jc-Pt3" firstAttribute="leading" secondItem="igo-Pt-hB3" secondAttribute="leading" constant="40" id="6Gi-Lq-YXn"/>
-                            <constraint firstItem="QZl-yc-yxJ" firstAttribute="top" secondItem="kwt-jA-f1h" secondAttribute="bottom" constant="20" id="7wj-l1-ZfH"/>
                             <constraint firstItem="QZl-yc-yxJ" firstAttribute="trailing" secondItem="igo-Pt-hB3" secondAttribute="trailing" id="ADL-In-TOD"/>
                             <constraint firstItem="QZl-yc-yxJ" firstAttribute="leading" secondItem="igo-Pt-hB3" secondAttribute="leading" id="EU9-RS-D1z"/>
                             <constraint firstItem="GZY-MC-M0L" firstAttribute="bottom" secondItem="igo-Pt-hB3" secondAttribute="bottom" id="FFx-72-tkn"/>
                             <constraint firstItem="kwt-jA-f1h" firstAttribute="leading" secondItem="igo-Pt-hB3" secondAttribute="leading" constant="40" id="I9q-28-Yli"/>
                             <constraint firstItem="zfj-0W-aFQ" firstAttribute="trailing" secondItem="igo-Pt-hB3" secondAttribute="trailing" id="Klj-ic-eO0"/>
                             <constraint firstItem="GZY-MC-M0L" firstAttribute="trailing" secondItem="igo-Pt-hB3" secondAttribute="trailing" id="R0I-AB-Rdv"/>
+                            <constraint firstItem="QZl-yc-yxJ" firstAttribute="top" secondItem="kwt-jA-f1h" secondAttribute="bottom" constant="120" id="ReC-Hy-70I"/>
                             <constraint firstItem="GZY-MC-M0L" firstAttribute="top" secondItem="igo-Pt-hB3" secondAttribute="top" id="Vx2-Wj-feH"/>
                             <constraint firstItem="zfj-0W-aFQ" firstAttribute="top" secondItem="igo-Pt-hB3" secondAttribute="top" id="eHp-W4-9ui"/>
                             <constraint firstItem="GZY-MC-M0L" firstAttribute="leading" secondItem="igo-Pt-hB3" secondAttribute="leading" id="lDT-GT-3cL"/>
