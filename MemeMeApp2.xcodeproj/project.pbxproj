@@ -15,6 +15,7 @@
 		9305D445281609020008766F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9305D443281609020008766F /* LaunchScreen.storyboard */; };
 		93D66BDB2817024800C4E142 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D66BDA2817024800C4E142 /* Meme.swift */; };
 		93D66BDD2817027800C4E142 /* MemeViewController+UIImagePickerControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D66BDC2817027800C4E142 /* MemeViewController+UIImagePickerControllerDelegate.swift */; };
+		93D66BDF28171BCD00C4E142 /* Memes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D66BDE28171BCD00C4E142 /* Memes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		9305D446281609020008766F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93D66BDA2817024800C4E142 /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 		93D66BDC2817027800C4E142 /* MemeViewController+UIImagePickerControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MemeViewController+UIImagePickerControllerDelegate.swift"; sourceTree = "<group>"; };
+		93D66BDE28171BCD00C4E142 /* Memes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				93D66BDA2817024800C4E142 /* Meme.swift */,
+				93D66BDE28171BCD00C4E142 /* Memes.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9305D43D281609000008766F /* MemeViewController.swift in Sources */,
+				93D66BDF28171BCD00C4E142 /* Memes.swift in Sources */,
 				93D66BDD2817027800C4E142 /* MemeViewController+UIImagePickerControllerDelegate.swift in Sources */,
 				93D66BDB2817024800C4E142 /* Meme.swift in Sources */,
 				9305D439281609000008766F /* AppDelegate.swift in Sources */,
