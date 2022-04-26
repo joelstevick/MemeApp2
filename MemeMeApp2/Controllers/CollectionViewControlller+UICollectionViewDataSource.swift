@@ -7,16 +7,17 @@
 
 import UIKit
 
-extension CollectionViewController {
+extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    // MARK: -
+    // MARK: - protocol implementations
+    // MARK: UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
    
         return self.memes.getMemes().count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
+
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemeCollectionCell", for: indexPath) as? MemeCollectionViewCell
         let entry = self.memes.getMemes()[(indexPath as NSIndexPath).row]
         
@@ -27,8 +28,13 @@ extension CollectionViewController {
         return cell!
     }
     
+    // MARK: UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath:IndexPath) {
         
+        // de-select
+        collectionView.deselectItem(at: indexPath, animated: true)
+        
+        // allow the user to share
         let entry = memes.getMemes()[indexPath.row]
         
         let items = [entry.meme.getImage()]
@@ -43,4 +49,6 @@ extension CollectionViewController {
         present(ac, animated: true)
         
     }
+    
+    // MARK: UICollectionViewDelegateFlowLayout
 }

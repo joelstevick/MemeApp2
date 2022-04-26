@@ -159,10 +159,10 @@
             </objects>
             <point key="canvasLocation" x="776.81159420289862" y="-374.33035714285711"/>
         </scene>
-        <!--o-->
+        <!--Collection View Controller-->
         <scene sceneID="Not-CS-0Lp">
             <objects>
-                <viewController id="Iyp-hp-7lc" customClass="o" sceneMemberID="viewController">
+                <viewController id="Iyp-hp-7lc" customClass="CollectionViewController" customModule="MemeMeApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tXk-2S-6l3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -217,6 +217,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="B70-qW-OLb"/>
+                    <connections>
+                        <outlet property="collectionView" destination="rli-p1-tUd" id="TyW-IS-nxi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aW1-b0-2kY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
