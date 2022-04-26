@@ -18,8 +18,8 @@ class CollectionViewController: UIViewController {
         collectionView.dataSource = self
     }
     
-    // MARK - Actions
+    // MARK: - Actions
     @IBAction func unwindToCollectionView(_ unwindSegue: UIStoryboardSegue) {
-        
+        collectionView.reloadData()
     }
 }
