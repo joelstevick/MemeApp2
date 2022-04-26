@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -159,10 +158,10 @@
             </objects>
             <point key="canvasLocation" x="776.81159420289862" y="-374.33035714285711"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--o-->
         <scene sceneID="Not-CS-0Lp">
             <objects>
-                <viewController id="Iyp-hp-7lc" customClass="CollectionViewController" customModule="MemeMeApp2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Iyp-hp-7lc" customClass="o" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tXk-2S-6l3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,50 +182,13 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1kP-2P-W4r">
-                                <rect key="frame" x="0.0" y="132" width="414" height="681"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jij-sT-bnV">
-                                    <size key="itemSize" width="266" height="305"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemeCollectionCell" id="hr5-Gn-GAD" customClass="MemeCollectionViewCell" customModule="MemeMeApp2" customModuleProvider="target">
-                                        <rect key="frame" x="74" y="0.0" width="266" height="305"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7pd-TJ-OqJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="266" height="305"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AhN-HA-e6s">
-                                                    <rect key="frame" x="13" y="66" width="240" height="128"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                            </subviews>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="266" height="305"/>
-                                        <connections>
-                                            <outlet property="imageView" destination="AhN-HA-e6s" id="7eP-cw-AOR"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="Iyp-hp-7lc" id="4Ld-pY-VJ8"/>
-                                </connections>
-                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dbx-kA-jWD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="sd9-Eu-Oth" firstAttribute="top" secondItem="dbx-kA-jWD" secondAttribute="top" id="3HL-W4-NRz"/>
-                            <constraint firstItem="1kP-2P-W4r" firstAttribute="leading" secondItem="dbx-kA-jWD" secondAttribute="leading" id="DD9-9S-oSG"/>
                             <constraint firstAttribute="trailing" secondItem="sd9-Eu-Oth" secondAttribute="trailing" id="MZd-oC-sHm"/>
-                            <constraint firstItem="1kP-2P-W4r" firstAttribute="top" secondItem="sd9-Eu-Oth" secondAttribute="bottom" id="X2D-1V-Jha"/>
-                            <constraint firstItem="dbx-kA-jWD" firstAttribute="bottom" secondItem="1kP-2P-W4r" secondAttribute="bottom" id="bj6-qz-Hiw"/>
                             <constraint firstItem="sd9-Eu-Oth" firstAttribute="leading" secondItem="tXk-2S-6l3" secondAttribute="leading" id="u0a-yZ-La9"/>
-                            <constraint firstItem="dbx-kA-jWD" firstAttribute="trailing" secondItem="1kP-2P-W4r" secondAttribute="trailing" id="yri-Cr-awA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="B70-qW-OLb"/>

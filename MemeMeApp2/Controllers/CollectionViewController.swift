@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CollectionViewController: UICollectionViewController {
+class CollectionViewController: UIViewController {
   
     var memes = Memes.shared
     
