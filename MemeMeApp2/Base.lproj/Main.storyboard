@@ -227,6 +227,7 @@
                             <constraint firstItem="dbx-kA-jWD" firstAttribute="trailing" secondItem="rli-p1-tUd" secondAttribute="trailing" id="7WV-HT-Ltp"/>
                             <constraint firstItem="rli-p1-tUd" firstAttribute="top" secondItem="sd9-Eu-Oth" secondAttribute="bottom" id="9qn-Xm-Mqm"/>
                             <constraint firstItem="rli-p1-tUd" firstAttribute="leading" secondItem="dbx-kA-jWD" secondAttribute="leading" id="DUM-tW-OYQ"/>
+                            <constraint firstAttribute="bottom" secondItem="rli-p1-tUd" secondAttribute="bottom" constant="20" symbolic="YES" id="HNb-TS-Rgf"/>
                             <constraint firstAttribute="trailing" secondItem="sd9-Eu-Oth" secondAttribute="trailing" id="MZd-oC-sHm"/>
                             <constraint firstItem="sd9-Eu-Oth" firstAttribute="leading" secondItem="tXk-2S-6l3" secondAttribute="leading" id="u0a-yZ-La9"/>
                         </constraints>
