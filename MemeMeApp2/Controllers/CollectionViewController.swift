@@ -7,9 +7,8 @@
 
 import UIKit
 
-class CollectionViewController: UIViewController {
-    
-    @IBOutlet weak var tableView: UITableView!
+class CollectionViewController: UICollectionViewController {
+  
     var memes = Memes.shared
     
     @IBAction func unwindToCollectionView(_ unwindSegue: UIStoryboardSegue) {
