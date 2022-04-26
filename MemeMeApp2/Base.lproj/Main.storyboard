@@ -337,11 +337,13 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="bottomText" destination="kwt-jA-f1h" id="atZ-s2-Dve"/>
+                        <outlet property="bottomToolbar" destination="QZl-yc-yxJ" id="b5J-pX-k3a"/>
                         <outlet property="cameraBtn" destination="61I-dO-cvk" id="R8v-i4-mMq"/>
                         <outlet property="imagePickerView" destination="GZY-MC-M0L" id="Eet-0U-k57"/>
                         <outlet property="saveBtn" destination="Zh8-aP-qCS" id="1WT-Ph-0I6"/>
                         <outlet property="shareBtn" destination="STb-7c-oRQ" id="KJR-nG-czV"/>
                         <outlet property="topText" destination="IES-jc-Pt3" id="jCJ-cu-vqe"/>
+                        <outlet property="topToolbar" destination="zfj-0W-aFQ" id="SxS-6N-YYT"/>
                         <segue destination="spL-RS-keY" kind="unwind" identifier="unwindToCollectionView" unwindAction="unwindToCollectionView:" id="bdV-KC-Mtd"/>
                         <segue destination="spL-RS-keY" kind="unwind" identifier="unwindToTableView" unwindAction="unwindToTableView:" id="0Ze-N5-asD"/>
                     </connections>
