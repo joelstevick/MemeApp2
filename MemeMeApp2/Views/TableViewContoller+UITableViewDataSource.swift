@@ -23,7 +23,7 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate {
         // Set the name and image
         cell!.toplabel!.text = entry.meme.getTopText()
         cell!.bottomLabel!.text = entry.meme.getBottomText()
-        cell!.imageView!.image = entry.meme.getOriginalImage()
+        cell!.imageView!.image = entry.meme.getImage()
       
         
         return cell!
