@@ -18,6 +18,14 @@ class CollectionViewController: UIViewController {
         collectionView.dataSource = self
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "MemeVC" {
+            let vc = segue.destination as! MemeViewController
+            vc.unwindTarget = "unwindToCollectionView"
+        }
+    }
+
+    
     // MARK: - Actions
     @IBAction func unwindToCollectionView(_ unwindSegue: UIStoryboardSegue) {
         collectionView.reloadData()
