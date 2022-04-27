@@ -16,6 +16,9 @@ class TableViewController: UIViewController {
     var memes = Memes.shared
     
     // MARK: - Lifecycle methods
+    override func viewDidLoad() {
+        self.tabBarController!.delegate = self
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "MemeVC" {
             let vc = segue.destination as! MemeViewController
@@ -25,6 +28,7 @@ class TableViewController: UIViewController {
 
     // MARK: - Actions
     @IBAction func unwindToTableView(_ unwindSegue: UIStoryboardSegue) {
+        print ("got here")
         tableView.reloadData()
     }
     

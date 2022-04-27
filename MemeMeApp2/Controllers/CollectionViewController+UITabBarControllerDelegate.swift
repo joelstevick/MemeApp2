@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension CollectionViewController: UITabBarDelegate {
+extension CollectionViewController: UITabBarControllerDelegate {
     internal func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         collectionView.reloadData()
     }

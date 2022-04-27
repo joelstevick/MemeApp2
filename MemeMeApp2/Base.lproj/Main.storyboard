@@ -270,6 +270,8 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="kwt-jA-f1h" firstAttribute="bottom" secondItem="llx-5I-WyV" secondAttribute="bottom" id="0VJ-fB-r2t"/>
+                                    <constraint firstItem="IES-jc-Pt3" firstAttribute="leading" secondItem="llx-5I-WyV" secondAttribute="leading" constant="20" id="G0h-LK-Pga"/>
+                                    <constraint firstItem="IES-jc-Pt3" firstAttribute="trailing" secondItem="llx-5I-WyV" secondAttribute="trailing" constant="-20" id="QUx-2v-If1"/>
                                     <constraint firstItem="GZY-MC-M0L" firstAttribute="trailing" secondItem="llx-5I-WyV" secondAttribute="trailing" id="eoF-eh-d3Y"/>
                                     <constraint firstItem="GZY-MC-M0L" firstAttribute="leading" secondItem="llx-5I-WyV" secondAttribute="leading" id="ext-dH-X6f"/>
                                     <constraint firstItem="IES-jc-Pt3" firstAttribute="top" secondItem="llx-5I-WyV" secondAttribute="top" constant="60" id="umP-yd-i2k"/>
@@ -317,7 +319,7 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ATH-18-pTg"/>
                                     <barButtonItem title="Cancel" style="plain" id="yh2-db-Wab">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="IbE-4x-4o1">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="IbE-4x-4o1">
                                             <rect key="frame" x="317.5" y="3" width="76.5" height="34.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Button"/>
@@ -368,7 +370,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="b0y-K9-fJe"/>
+        <segue reference="bDd-09-nKl"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="94"/>

@@ -7,8 +7,9 @@
 
 import UIKit
 
-extension TableViewController: UITabBarDelegate {
+extension TableViewController: UITabBarControllerDelegate {
     internal func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         tableView.reloadData()
+        print("hello")
     }
 }
