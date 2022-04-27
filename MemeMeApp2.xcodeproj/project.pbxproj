@@ -91,17 +91,41 @@
 			path = MemeMeApp2;
 			sourceTree = "<group>";
 		};
-		93967FC028186AFA006B95B7 /* Controllers */ = {
+		93352AC52819B80200C38E69 /* MemeView */ = {
 			isa = PBXGroup;
 			children = (
 				9305D43C281609000008766F /* MemeViewController.swift */,
 				93D66BDC2817027800C4E142 /* MemeViewController+UIImagePickerControllerDelegate.swift */,
+			);
+			path = MemeView;
+			sourceTree = "<group>";
+		};
+		93352AC62819B82600C38E69 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
 				93D66BE02817281B00C4E142 /* TableViewController.swift */,
 				93D66BE2281728E300C4E142 /* TableViewContoller+UITableViewDataSource.swift */,
 				93352AC12819A8C900C38E69 /* TableViewController+UITabBarContollerDelegate.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		93352AC72819B83100C38E69 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
 				93D66BE428173FCF00C4E142 /* CollectionViewController.swift */,
 				93352ABF28186ED200C38E69 /* CollectionViewControlller+UICollectionViewDataSource.swift */,
 				93352AC32819A93300C38E69 /* CollectionViewController+UITabBarControllerDelegate.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		93967FC028186AFA006B95B7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				93352AC52819B80200C38E69 /* MemeView */,
+				93352AC62819B82600C38E69 /* TableView */,
+				93352AC72819B83100C38E69 /* CollectionView */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
