@@ -16,6 +16,7 @@ class CollectionViewController: UIViewController {
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         collectionView.dataSource = self
+        self.tabBarController!.delegate = self
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
