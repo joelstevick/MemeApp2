@@ -5,6 +5,7 @@
 //  Created by Joel Stevick on 4/25/22.
 //
 // This service (singleton) is used to manage the shared data needed for the app
+// Developer note: I have a personal preference for using explicit get-functions rather than getters.
 
 import Foundation
 
