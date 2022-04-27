@@ -93,6 +93,7 @@
 		93352AC52819B80200C38E69 /* MemeView */ = {
 			isa = PBXGroup;
 			children = (
+				93352AC82819B8B100C38E69 /* MemeCell */,
 				9305D43C281609000008766F /* MemeViewController.swift */,
 				93D66BDC2817027800C4E142 /* MemeViewController+UIImagePickerControllerDelegate.swift */,
 			);
@@ -119,6 +120,15 @@
 			path = CollectionView;
 			sourceTree = "<group>";
 		};
+		93352AC82819B8B100C38E69 /* MemeCell */ = {
+			isa = PBXGroup;
+			children = (
+				93D66BE6281762B400C4E142 /* MemeCellTableViewCell.swift */,
+				93967FBE281869A7006B95B7 /* MemeCollectionViewCell.swift */,
+			);
+			path = MemeCell;
+			sourceTree = "<group>";
+		};
 		93967FC028186AFA006B95B7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,8 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				9305D43E281609000008766F /* Main.storyboard */,
-				93D66BE6281762B400C4E142 /* MemeCellTableViewCell.swift */,
-				93967FBE281869A7006B95B7 /* MemeCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
