@@ -44,14 +44,9 @@ struct Meme {
         return topTextField!.trimmingCharacters(in: .whitespacesAndNewlines).count > 0
         && bottomTextField!.trimmingCharacters(in: .whitespacesAndNewlines).count > 0
     }
-    mutating func build(_ view: UIView, _ navigationController: UINavigationController?, _ topToolbar: UIToolbar, _ bottomToolbar: UIToolbar) -> UIImage {
+    mutating func build(_ view: UIView) -> UIImage {
         guard isValid() else {
             fatalError("All properties are required!")
-        }
-        
-        // Hide toolbar and navbar
-        if let navigationController = navigationController {
-            hideControls(navigationController: navigationController, topToolbar: topToolbar, bottomToolbar: bottomToolbar, hide: true)
         }
         
         // Render view to an image
@@ -60,10 +55,6 @@ struct Meme {
         let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
-        // Show toolbar and navbar
-        if let navigationController = navigationController {
-            hideControls(navigationController: navigationController, topToolbar: topToolbar, bottomToolbar: bottomToolbar, hide: false)
-        }
         self.memedImage = memedImage
         
         return memedImage
@@ -90,10 +81,4 @@ struct Meme {
         return originalImage!
     }
     
-    func hideControls(navigationController: UINavigationController, topToolbar: UIToolbar, bottomToolbar: UIToolbar, hide: Bool ) {
-        navigationController.setToolbarHidden(hide, animated: false)
-        navigationController.setNavigationBarHidden(hide, animated: false)
-        topToolbar.isHidden = hide
-        bottomToolbar.isHidden = hide
-    }
 }

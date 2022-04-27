@@ -95,7 +95,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     // MARK: - Actions
     @IBAction func sharePressed(_ sender: Any) {
         
-        let items = [meme.build(stackView, navigationController, topToolbar, bottomToolbar)]
+        let items = [meme.build(stackView)]
         
         let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
         ac.completionWithItemsHandler = { (activityType: UIActivity.ActivityType?, completed:
@@ -116,7 +116,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     @IBAction func saveBtnClicked(_ sender: UIBarButtonItem) {
-        _ = meme.build(stackView, navigationController, topToolbar, bottomToolbar)
+        _ = meme.build(stackView)
         
         meme.save()
         
