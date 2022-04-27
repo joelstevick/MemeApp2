@@ -256,7 +256,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="713"/>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IES-jc-Pt3" userLabel="Top Text">
-                                        <rect key="frame" x="40" y="100" width="334" height="50"/>
+                                        <rect key="frame" x="40" y="40" width="334" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="AJe-ND-90F"/>
@@ -266,7 +266,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kwt-jA-f1h" userLabel="Bottom Text">
-                                        <rect key="frame" x="40" y="190" width="414" height="50"/>
+                                        <rect key="frame" x="40" y="603" width="414" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="m4d-iK-qaO"/>
@@ -282,9 +282,9 @@
                                     <constraint firstItem="kwt-jA-f1h" firstAttribute="leading" secondItem="78y-wj-Amg" secondAttribute="leading" constant="40" id="I6P-z5-S5g"/>
                                     <constraint firstItem="GZY-MC-M0L" firstAttribute="top" secondItem="78y-wj-Amg" secondAttribute="top" id="K0D-nx-m9D"/>
                                     <constraint firstItem="IES-jc-Pt3" firstAttribute="trailing" secondItem="78y-wj-Amg" secondAttribute="trailing" constant="-40" id="O4Z-nZ-ori"/>
-                                    <constraint firstItem="IES-jc-Pt3" firstAttribute="top" secondItem="78y-wj-Amg" secondAttribute="top" constant="100" id="QvH-Lf-Nsh"/>
+                                    <constraint firstItem="IES-jc-Pt3" firstAttribute="top" secondItem="78y-wj-Amg" secondAttribute="top" constant="40" id="QvH-Lf-Nsh"/>
                                     <constraint firstItem="IES-jc-Pt3" firstAttribute="leading" secondItem="78y-wj-Amg" secondAttribute="leading" constant="40" id="RwU-n5-7km"/>
-                                    <constraint firstItem="kwt-jA-f1h" firstAttribute="top" secondItem="IES-jc-Pt3" secondAttribute="bottom" constant="40" id="XRN-MW-t0P"/>
+                                    <constraint firstItem="kwt-jA-f1h" firstAttribute="bottom" secondItem="78y-wj-Amg" secondAttribute="bottomMargin" constant="-52" id="XRN-MW-t0P"/>
                                     <constraint firstItem="kwt-jA-f1h" firstAttribute="trailing" secondItem="78y-wj-Amg" secondAttribute="trailing" constant="40" id="hIn-Wa-Ghv"/>
                                     <constraint firstItem="GZY-MC-M0L" firstAttribute="bottom" secondItem="78y-wj-Amg" secondAttribute="bottom" id="vuk-Ae-HXK"/>
                                 </constraints>
