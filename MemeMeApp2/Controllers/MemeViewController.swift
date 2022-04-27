@@ -18,7 +18,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var saveBtn: UIBarButtonItem!
     @IBOutlet weak var topToolbar: UIToolbar!
     @IBOutlet weak var bottomToolbar: UIToolbar!
-    
+    @IBOutlet weak var stackView: UIStackView!
     // MARK: - Properties
     
     var unwindTarget: String?
@@ -95,7 +95,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     // MARK: - Actions
     @IBAction func sharePressed(_ sender: Any) {
         
-        let items = [meme.build(view, navigationController, topToolbar, bottomToolbar)]
+        let items = [meme.build(stackView, navigationController, topToolbar, bottomToolbar)]
         
         let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
         ac.completionWithItemsHandler = { (activityType: UIActivity.ActivityType?, completed:
@@ -116,7 +116,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     @IBAction func saveBtnClicked(_ sender: UIBarButtonItem) {
-        _ = meme.build(view, navigationController, topToolbar, bottomToolbar)
+        _ = meme.build(stackView, navigationController, topToolbar, bottomToolbar)
         
         meme.save()
         
