@@ -83,7 +83,6 @@
 				9305D438281609000008766F /* AppDelegate.swift */,
 				9305D43A281609000008766F /* SceneDelegate.swift */,
 				93D66BD82817016900C4E142 /* Views */,
-				9305D43E281609000008766F /* Main.storyboard */,
 				9305D441281609020008766F /* Assets.xcassets */,
 				9305D443281609020008766F /* LaunchScreen.storyboard */,
 				9305D446281609020008766F /* Info.plist */,
@@ -133,6 +132,7 @@
 		93D66BD82817016900C4E142 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9305D43E281609000008766F /* Main.storyboard */,
 				93D66BE6281762B400C4E142 /* MemeCellTableViewCell.swift */,
 				93967FBE281869A7006B95B7 /* MemeCollectionViewCell.swift */,
 			);
