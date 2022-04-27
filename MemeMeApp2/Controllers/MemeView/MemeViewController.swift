@@ -19,6 +19,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var topToolbar: UIToolbar!
     @IBOutlet weak var bottomToolbar: UIToolbar!
     @IBOutlet weak var stackView: UIStackView!
+    
     // MARK: - Properties
     
     var unwindTarget: String?

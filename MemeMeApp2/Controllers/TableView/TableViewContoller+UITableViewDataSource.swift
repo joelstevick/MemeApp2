@@ -9,7 +9,7 @@ import UIKit
 
 extension TableViewController: UITableViewDataSource, UITableViewDelegate {
     
-    // MARK: -
+    // MARK: - Protocol implementation
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
    
         return self.memes.getMemes().count

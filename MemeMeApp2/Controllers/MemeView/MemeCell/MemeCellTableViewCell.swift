@@ -9,10 +9,12 @@ import UIKit
 
 class MemeCellTableViewCell: UITableViewCell {
 
+    // MARK: - Properties
     @IBOutlet weak var toplabel: UILabel!
     @IBOutlet weak var bottomLabel: UILabel!
     @IBOutlet weak var memeImageView: UIImageView!
     
+    // MARK: - Overrides
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
