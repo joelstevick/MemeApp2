@@ -78,10 +78,9 @@
 		9305D437281609000008766F /* MemeMeApp2 */ = {
 			isa = PBXGroup;
 			children = (
+				93352AC92819B91800C38E69 /* Delegates */,
 				93967FC028186AFA006B95B7 /* Controllers */,
 				93D66BD92817023100C4E142 /* Model */,
-				9305D438281609000008766F /* AppDelegate.swift */,
-				9305D43A281609000008766F /* SceneDelegate.swift */,
 				93D66BD82817016900C4E142 /* Views */,
 				9305D441281609020008766F /* Assets.xcassets */,
 				9305D446281609020008766F /* Info.plist */,
@@ -126,6 +125,15 @@
 				93967FBE281869A7006B95B7 /* MemeCollectionViewCell.swift */,
 			);
 			path = MemeCell;
+			sourceTree = "<group>";
+		};
+		93352AC92819B91800C38E69 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				9305D438281609000008766F /* AppDelegate.swift */,
+				9305D43A281609000008766F /* SceneDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 		93967FC028186AFA006B95B7 /* Controllers */ = {
