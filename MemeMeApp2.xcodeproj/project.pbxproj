@@ -98,9 +98,9 @@
 				93D66BDC2817027800C4E142 /* MemeViewController+UIImagePickerControllerDelegate.swift */,
 				93D66BE02817281B00C4E142 /* TableViewController.swift */,
 				93D66BE2281728E300C4E142 /* TableViewContoller+UITableViewDataSource.swift */,
+				93352AC12819A8C900C38E69 /* TableViewController+UITabBarContollerDelegate.swift */,
 				93D66BE428173FCF00C4E142 /* CollectionViewController.swift */,
 				93352ABF28186ED200C38E69 /* CollectionViewControlller+UICollectionViewDataSource.swift */,
-				93352AC12819A8C900C38E69 /* TableViewController+UITabBarContollerDelegate.swift */,
 				93352AC32819A93300C38E69 /* CollectionViewController+UITabBarControllerDelegate.swift */,
 			);
 			path = Controllers;
