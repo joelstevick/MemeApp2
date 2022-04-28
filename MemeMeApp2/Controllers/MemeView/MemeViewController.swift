@@ -171,7 +171,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         textField.defaultTextAttributes = memeTextAttributes
         textField.delegate = self
         textField.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: memeTextAttributes)
-
+        textField.textAlignment = .center
     }
 
     func unwind() {
