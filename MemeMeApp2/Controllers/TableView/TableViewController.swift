@@ -11,13 +11,15 @@ import UIKit
 class TableViewController: UIViewController {
     
     // MARK: - Properties
+    @IBOutlet weak var topToolbar: UIToolbar!
     @IBOutlet weak var tableView: UITableView!
     
     var memes = Memes.shared
     
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
-        self.tabBarController!.delegate = self
+        tabBarController!.delegate = self
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "MemeVC" {

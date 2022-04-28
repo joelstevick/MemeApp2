@@ -70,7 +70,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Vd-tV-HaK">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="50" width="414" height="44"/>
                                 <items>
                                     <barButtonItem title="Edit" id="mHN-QX-XeE"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="p3m-Dj-ohJ"/>
@@ -87,7 +87,7 @@
                                 <toolbarAppearance key="standardAppearance"/>
                             </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uR0-PT-Ini">
-                                <rect key="frame" x="0.0" y="132" width="414" height="764"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="802"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemeCell" rowHeight="137" id="wx5-GJ-fRW" customClass="MemeCellTableViewCell" customModule="MemeMeApp2" customModuleProvider="target">
@@ -141,7 +141,7 @@
                         <viewLayoutGuide key="safeArea" id="VV4-DN-bOu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="7Vd-tV-HaK" firstAttribute="top" secondItem="VV4-DN-bOu" secondAttribute="top" id="4zg-0g-IxO"/>
+                            <constraint firstItem="7Vd-tV-HaK" firstAttribute="top" secondItem="4mg-ys-aH7" secondAttribute="top" constant="50" id="4zg-0g-IxO"/>
                             <constraint firstAttribute="trailing" secondItem="uR0-PT-Ini" secondAttribute="trailing" id="8W2-eo-6g4"/>
                             <constraint firstItem="uR0-PT-Ini" firstAttribute="top" secondItem="7Vd-tV-HaK" secondAttribute="bottom" id="B6A-QB-Hsu"/>
                             <constraint firstAttribute="trailing" secondItem="7Vd-tV-HaK" secondAttribute="trailing" id="BzO-mI-cmE"/>
@@ -153,6 +153,7 @@
                     <navigationItem key="navigationItem" id="Cc6-Dj-V1e"/>
                     <connections>
                         <outlet property="tableView" destination="uR0-PT-Ini" id="eAs-cy-vow"/>
+                        <outlet property="topToolbar" destination="7Vd-tV-HaK" id="cKw-wf-Ual"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ewy-12-wRA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -168,7 +169,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sd9-Eu-Oth">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="50" width="414" height="44"/>
                                 <items>
                                     <barButtonItem title="Edit" id="1a2-TY-aZN"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="wR9-bL-wZN"/>
@@ -184,7 +185,7 @@
                                 </items>
                             </toolbar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rli-p1-tUd">
-                                <rect key="frame" x="0.0" y="132" width="414" height="744"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="782"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aMq-4f-xAZ">
                                     <size key="itemSize" width="206" height="169"/>
@@ -222,7 +223,7 @@
                         <viewLayoutGuide key="safeArea" id="dbx-kA-jWD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="sd9-Eu-Oth" firstAttribute="top" secondItem="dbx-kA-jWD" secondAttribute="top" id="3HL-W4-NRz"/>
+                            <constraint firstItem="sd9-Eu-Oth" firstAttribute="top" secondItem="tXk-2S-6l3" secondAttribute="top" constant="50" id="3HL-W4-NRz"/>
                             <constraint firstAttribute="bottom" secondItem="rli-p1-tUd" secondAttribute="bottom" constant="20" symbolic="YES" id="66x-ek-djf"/>
                             <constraint firstItem="dbx-kA-jWD" firstAttribute="trailing" secondItem="rli-p1-tUd" secondAttribute="trailing" id="7WV-HT-Ltp"/>
                             <constraint firstItem="rli-p1-tUd" firstAttribute="top" secondItem="sd9-Eu-Oth" secondAttribute="bottom" id="9qn-Xm-Mqm"/>
@@ -252,10 +253,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="78y-wj-Amg" userLabel="Memed Image View">
                                 <rect key="frame" x="0.0" y="40" width="414" height="713"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GZY-MC-M0L">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GZY-MC-M0L">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="713"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IES-jc-Pt3" userLabel="Top Text">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IES-jc-Pt3" userLabel="Top Text">
                                         <rect key="frame" x="40" y="40" width="334" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -265,7 +266,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kwt-jA-f1h" userLabel="Bottom Text">
+                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kwt-jA-f1h" userLabel="Bottom Text">
                                         <rect key="frame" x="40" y="603" width="414" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
