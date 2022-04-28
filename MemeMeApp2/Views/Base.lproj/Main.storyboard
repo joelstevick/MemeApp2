@@ -72,7 +72,9 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Vd-tV-HaK">
                                 <rect key="frame" x="0.0" y="50" width="414" height="44"/>
                                 <items>
-                                    <barButtonItem title="Edit" id="mHN-QX-XeE"/>
+                                    <barButtonItem title="Edit" id="mHN-QX-XeE">
+                                        <inset key="imageInsets" minX="-28" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="p3m-Dj-ohJ"/>
                                     <barButtonItem title="Sent Memes" style="plain" id="4aV-hH-28w">
                                         <color key="tintColor" systemColor="labelColor"/>
@@ -264,16 +266,16 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="evG-E9-ObT"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                     </textField>
                                     <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kwt-jA-f1h" userLabel="Bottom Text">
-                                        <rect key="frame" x="40" y="603" width="414" height="50"/>
+                                        <rect key="frame" x="40" y="635" width="414" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="m4d-iK-qaO"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -285,7 +287,7 @@
                                     <constraint firstItem="IES-jc-Pt3" firstAttribute="trailing" secondItem="78y-wj-Amg" secondAttribute="trailing" constant="-40" id="O4Z-nZ-ori"/>
                                     <constraint firstItem="IES-jc-Pt3" firstAttribute="top" secondItem="78y-wj-Amg" secondAttribute="top" constant="40" id="QvH-Lf-Nsh"/>
                                     <constraint firstItem="IES-jc-Pt3" firstAttribute="leading" secondItem="78y-wj-Amg" secondAttribute="leading" constant="40" id="RwU-n5-7km"/>
-                                    <constraint firstItem="kwt-jA-f1h" firstAttribute="bottom" secondItem="78y-wj-Amg" secondAttribute="bottomMargin" constant="-52" id="XRN-MW-t0P"/>
+                                    <constraint firstItem="kwt-jA-f1h" firstAttribute="bottom" secondItem="78y-wj-Amg" secondAttribute="bottomMargin" constant="-20" id="XRN-MW-t0P"/>
                                     <constraint firstItem="kwt-jA-f1h" firstAttribute="trailing" secondItem="78y-wj-Amg" secondAttribute="trailing" constant="40" id="hIn-Wa-Ghv"/>
                                     <constraint firstItem="GZY-MC-M0L" firstAttribute="bottom" secondItem="78y-wj-Amg" secondAttribute="bottom" id="vuk-Ae-HXK"/>
                                 </constraints>
