@@ -31,6 +31,8 @@ extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDa
     // MARK: UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath:IndexPath) {
         
+        print("selected")
+        
         // de-select
         collectionView.deselectItem(at: indexPath, animated: true)
         

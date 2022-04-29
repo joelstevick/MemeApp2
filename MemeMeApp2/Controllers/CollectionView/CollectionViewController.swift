@@ -20,6 +20,7 @@ class CollectionViewController: UIViewController {
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         collectionView.dataSource = self
+        collectionView.delegate = self
         self.tabBarController!.delegate = self
     }
     
