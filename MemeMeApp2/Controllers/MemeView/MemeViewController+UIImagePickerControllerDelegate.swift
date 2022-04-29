@@ -17,7 +17,7 @@ extension MemeViewController {
         imagePickerView.image = info[.originalImage] as? UIImage
         dismiss(animated: true)
         
-        meme.addOriginalImage(imagePickerView.image!)
+        meme!.addOriginalImage(imagePickerView.image!)
         
         updateModel()
     }

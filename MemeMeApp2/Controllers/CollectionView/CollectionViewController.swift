@@ -13,6 +13,9 @@ class CollectionViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     var memes = Memes.shared
     
+    // this property is set upon cell selection within the view and is passed to the MemeControllerView
+    var selectedMeme: Meme?
+    
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         collectionView.dataSource = self
@@ -23,6 +26,10 @@ class CollectionViewController: UIViewController {
         if segue.identifier == "MemeVC" {
             let vc = segue.destination as! MemeViewController
             vc.unwindTarget = "unwindToCollectionView"
+            
+            if let selectedMeme = selectedMeme {
+                vc.meme = selectedMeme
+            }
         }
     }
 

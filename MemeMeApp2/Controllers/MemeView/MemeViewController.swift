@@ -38,7 +38,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
         NSAttributedString.Key.strokeWidth:  -5.0 // need to do this so that the foreground color is applied 🤔
     ]
-    var meme = Meme()
+    var meme: Meme?
     
     var memes = Memes.shared
     
@@ -55,8 +55,18 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        configureTextField(topText, "Top")
-        configureTextField(bottomText, "Bottom")
+        // the source controller can set a meme that should be updated
+        if let meme = meme {
+            configureTextField(topText, meme.getTopText())
+            configureTextField(bottomText, meme.getBottomText())
+            
+            imagePickerView.image = meme.getOriginalImage()
+        } else {
+            // new meme
+            configureTextField(topText, "Top")
+            configureTextField(bottomText, "Bottom")
+            meme = Meme()
+        }
         
         pickerController.delegate = self
         
@@ -84,27 +94,27 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 
     func updateModel() {
         if let text = topText.text {
-            meme.addTopTextField(text)
+            meme!.addTopTextField(text)
         }
         if let text = bottomText.text {
-            meme.addBottomTextField(text)
+            meme!.addBottomTextField(text)
         }
         
-        saveBtn.isEnabled = meme.isValid()
-        shareBtn.isEnabled = meme.isValid()
+        saveBtn.isEnabled = meme!.isValid()
+        shareBtn.isEnabled = meme!.isValid()
     }
     // MARK: - Actions
     @IBAction func sharePressed(_ sender: Any) {
         
-        let items = [meme.build(memedImageView)]
+        let items = [meme!.build(memedImageView)]
         
         let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
         ac.completionWithItemsHandler = { (activityType: UIActivity.ActivityType?, completed:
                                             Bool, arrayReturnedItems: [Any]?, error: Error?) in
             if completed {
-                self.meme.save()
+                self.meme!.save()
                 
-                self.memes.append(self.meme)
+                self.memes.append(self.meme!)
                 self.unwind()
                 return
             }
@@ -117,11 +127,11 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     @IBAction func saveBtnClicked(_ sender: UIBarButtonItem) {
-        _ = meme.build(memedImageView)
+        _ = meme!.build(memedImageView)
         
-        meme.save()
+        meme!.save()
         
-        memes.append(meme)
+        memes.append(meme!)
         
         unwind()
         
