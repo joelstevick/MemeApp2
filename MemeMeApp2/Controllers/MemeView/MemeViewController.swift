@@ -39,6 +39,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         NSAttributedString.Key.strokeWidth:  -5.0 // need to do this so that the foreground color is applied 🤔
     ]
     var meme: Meme?
+    var isUpdate = false
     
     var memes = Memes.shared
     
@@ -52,16 +53,15 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        // enable buttons based on the presence of a meme
-        saveBtn.isEnabled = (meme != nil) ? true : false
-        shareBtn.isEnabled = (meme != nil) ? true : false
-        
+       
         // the source controller can set a meme that should be updated
         if let meme = meme {
             configureTextField(topText, meme.getTopText(), isUpdate: true)
             configureTextField(bottomText, meme.getBottomText(), isUpdate: true)
             
             imagePickerView.image = meme.getOriginalImage()
+            
+            isUpdate = true
             
             updateModel()
             
@@ -71,6 +71,10 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             configureTextField(bottomText, "Bottom", isUpdate: false)
             meme = Meme()
         }
+        
+        // enable buttons based on the presence of a meme
+        saveBtn.isEnabled = isUpdate
+        shareBtn.isEnabled = isUpdate
         
         pickerController.delegate = self
         
@@ -118,7 +122,8 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             if completed {
                 self.meme!.save()
                 
-                self.memes.append(self.meme!)
+                self.addMemeToList()
+                
                 self.unwind()
                 return
             }
@@ -135,7 +140,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         meme!.save()
         
-        memes.append(meme!)
+        addMemeToList()
         
         unwind()
         
@@ -193,9 +198,14 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
 
     func unwind() {
-        
         performSegue(withIdentifier: unwindTarget!, sender: self)
-      
+    }
+    
+    func addMemeToList() {
+        if (!isUpdate) {
+            memes.append(meme!)
+        }
+        
     }
 
 
