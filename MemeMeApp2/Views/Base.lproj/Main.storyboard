@@ -69,7 +69,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uR0-PT-Ini">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uR0-PT-Ini">
                                 <rect key="frame" x="0.0" y="94" width="414" height="802"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -127,6 +127,7 @@
                             <constraint firstAttribute="trailing" secondItem="uR0-PT-Ini" secondAttribute="trailing" id="8W2-eo-6g4"/>
                             <constraint firstAttribute="bottom" secondItem="uR0-PT-Ini" secondAttribute="bottom" id="DqJ-kU-tgY"/>
                             <constraint firstItem="uR0-PT-Ini" firstAttribute="leading" secondItem="VV4-DN-bOu" secondAttribute="leading" id="Jy3-pJ-Wuh"/>
+                            <constraint firstItem="uR0-PT-Ini" firstAttribute="top" secondItem="VV4-DN-bOu" secondAttribute="top" constant="6" id="esR-WH-ceT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sent Memes" id="Cc6-Dj-V1e">
@@ -155,7 +156,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rli-p1-tUd">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rli-p1-tUd">
                                 <rect key="frame" x="0.0" y="94" width="414" height="782"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aMq-4f-xAZ">
@@ -198,6 +199,7 @@
                             <constraint firstItem="dbx-kA-jWD" firstAttribute="trailing" secondItem="rli-p1-tUd" secondAttribute="trailing" id="7WV-HT-Ltp"/>
                             <constraint firstItem="rli-p1-tUd" firstAttribute="leading" secondItem="dbx-kA-jWD" secondAttribute="leading" id="DUM-tW-OYQ"/>
                             <constraint firstAttribute="bottom" secondItem="rli-p1-tUd" secondAttribute="bottom" constant="20" symbolic="YES" id="HNb-TS-Rgf"/>
+                            <constraint firstItem="rli-p1-tUd" firstAttribute="top" secondItem="dbx-kA-jWD" secondAttribute="top" constant="6" id="kGj-vv-BOq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sent Memes" id="B70-qW-OLb">
