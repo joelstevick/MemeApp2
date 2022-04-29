@@ -22,6 +22,7 @@ class TableViewController: UIViewController {
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         tabBarController!.delegate = self
+        tableView.delegate = self
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -37,7 +38,6 @@ class TableViewController: UIViewController {
 
     // MARK: - Actions
     @IBAction func unwindToTableView(_ unwindSegue: UIStoryboardSegue) {
-        print ("got here")
         tableView.reloadData()
     }
     
