@@ -33,16 +33,9 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate {
         
         let entry = memes.getMemes()[indexPath.row]
         
-        let items = [entry.meme.getImage()]
+        selectedMeme = entry.meme
         
-        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
-        ac.completionWithItemsHandler = { (activityType: UIActivity.ActivityType?, completed:
-                                            Bool, arrayReturnedItems: [Any]?, error: Error?) in
-            if let shareError = error {
-                print("error while sharing: \(shareError.localizedDescription)")
-            }
-        }
-        present(ac, animated: true)
+        performSegue(withIdentifier: "MemeVC", sender: self)
         
     }
 }
