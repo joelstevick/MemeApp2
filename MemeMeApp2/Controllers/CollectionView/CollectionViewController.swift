@@ -33,6 +33,12 @@ class CollectionViewController: UIViewController {
                 vc.meme = selectedMeme
                 vc.entryId = entryId
             }
+        } else if segue.identifier == "MemeDetailVC" {
+            let vc = segue.destination as! MemeDetailViewController
+            if let selectedMeme = selectedMeme {
+                vc.meme = selectedMeme
+    
+            }
         }
     }
 

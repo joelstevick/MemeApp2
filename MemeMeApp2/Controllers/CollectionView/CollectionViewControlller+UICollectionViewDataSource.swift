@@ -41,7 +41,7 @@ extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDa
         selectedMeme = entry.meme
         entryId = entry.id
         
-        performSegue(withIdentifier: "MemeVC", sender: self)
+        performSegue(withIdentifier: "MemeDetailVC", sender: self)
         
     }
     

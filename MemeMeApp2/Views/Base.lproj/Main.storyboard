@@ -142,6 +142,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="uR0-PT-Ini" id="eAs-cy-vow"/>
+                        <segue destination="gX0-Pa-pRE" kind="presentation" identifier="MemeDetailVC" id="h69-Dw-yn5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ewy-12-wRA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -212,6 +213,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="rli-p1-tUd" id="TyW-IS-nxi"/>
+                        <segue destination="gX0-Pa-pRE" kind="presentation" identifier="MemeDetailVC" id="AX2-Mp-JdW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aW1-b0-2kY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -355,8 +357,38 @@
             </objects>
             <point key="canvasLocation" x="1699" y="94"/>
         </scene>
+        <!--Meme Detail View Controller-->
+        <scene sceneID="i4g-VF-Vx6">
+            <objects>
+                <viewController id="gX0-Pa-pRE" customClass="MemeDetailViewController" customModule="MemeMeApp2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yZG-qE-59b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xdr-FE-rIN">
+                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="g9k-tm-2SO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xdr-FE-rIN" firstAttribute="leading" secondItem="g9k-tm-2SO" secondAttribute="leading" id="Fys-HP-X9Y"/>
+                            <constraint firstItem="xdr-FE-rIN" firstAttribute="top" secondItem="g9k-tm-2SO" secondAttribute="top" id="ajo-Gh-Eee"/>
+                            <constraint firstItem="g9k-tm-2SO" firstAttribute="trailing" secondItem="xdr-FE-rIN" secondAttribute="trailing" id="jDt-bp-y0G"/>
+                            <constraint firstItem="g9k-tm-2SO" firstAttribute="bottom" secondItem="xdr-FE-rIN" secondAttribute="bottom" id="uud-Qg-Hwi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="xdr-FE-rIN" id="AKj-HY-SsQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="itT-6J-eYF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1903" y="782"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="AX2-Mp-JdW"/>
         <segue reference="bDd-09-nKl"/>
     </inferredMetricsTieBreakers>
     <resources>
