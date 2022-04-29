@@ -18,6 +18,7 @@ class TableViewController: UIViewController {
     
     // this property is set upon cell selection within the view and is passed to the MemeControllerView
     var selectedMeme: Meme?
+    var entryId: Int?
     
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
@@ -32,6 +33,7 @@ class TableViewController: UIViewController {
             
             if let selectedMeme = selectedMeme {
                 vc.meme = selectedMeme
+                vc.entryId = entryId
             }
         }
     }

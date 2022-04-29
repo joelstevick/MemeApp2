@@ -30,9 +30,11 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
         let entry = memes.getMemes()[indexPath.row]
         
         selectedMeme = entry.meme
+        entryId = entry.id
         
         performSegue(withIdentifier: "MemeVC", sender: self)
         

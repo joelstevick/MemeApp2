@@ -39,7 +39,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         NSAttributedString.Key.strokeWidth:  -5.0 // need to do this so that the foreground color is applied 🤔
     ]
     var meme: Meme?
-    var isUpdate = false
+    var entryId: Int?
     
     var memes = Memes.shared
     
@@ -61,8 +61,6 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             
             imagePickerView.image = meme.getOriginalImage()
             
-            isUpdate = true
-            
             updateModel()
             
         } else {
@@ -73,8 +71,9 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         }
         
         // enable buttons based on the presence of a meme
-        saveBtn.isEnabled = isUpdate
-        shareBtn.isEnabled = isUpdate
+        saveBtn.isEnabled = entryId != nil ? true : false
+        shareBtn.isEnabled = entryId != nil ? true : false
+        
         
         pickerController.delegate = self
         
@@ -136,6 +135,10 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     @IBAction func saveBtnClicked(_ sender: UIBarButtonItem) {
+        
+        // need updateModel here since the user is not always required t
+        updateModel()
+        
         _ = meme!.build(memedImageView)
         
         meme!.save()
@@ -202,7 +205,9 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     func addMemeToList() {
-        if (!isUpdate) {
+        if let entryId = entryId {
+            memes.replace(entryId: entryId, meme: meme!)
+        }else {
             memes.append(meme!)
         }
         

@@ -34,19 +34,12 @@ extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDa
         // de-select
         collectionView.deselectItem(at: indexPath, animated: true)
         
-        // allow the user to share
         let entry = memes.getMemes()[indexPath.row]
         
-        let items = [entry.meme.getImage()]
+        selectedMeme = entry.meme
+        entryId = entry.id
         
-        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
-        ac.completionWithItemsHandler = { (activityType: UIActivity.ActivityType?, completed:
-                                            Bool, arrayReturnedItems: [Any]?, error: Error?) in
-            if let shareError = error {
-                print("error while sharing: \(shareError.localizedDescription)")
-            }
-        }
-        present(ac, animated: true)
+        performSegue(withIdentifier: "MemeVC", sender: self)
         
     }
     

@@ -14,7 +14,7 @@ private var globalId = 0
 struct MemeListEntry {
     
     let id: Int
-    let meme: Meme
+    var meme: Meme
     
     init(_ meme: Meme) {
         globalId += 1
@@ -32,6 +32,18 @@ class Memes {
     
     func append(_ meme: Meme) {
         memes.append(MemeListEntry( meme))
+    }
+    
+    func replace(entryId: Int, meme: Meme) {
+        
+        let entry = memes.first { entry in
+            entry.id == entryId
+        }
+        
+        if var entry = entry {
+            entry.meme = meme
+        }
+    
     }
     
     func getMemes() -> [MemeListEntry] {
