@@ -48,23 +48,27 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         cameraBtn.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
         
-        saveBtn.isEnabled = false
-        shareBtn.isEnabled = false
-        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+        // enable buttons based on the presence of a meme
+        saveBtn.isEnabled = (meme != nil) ? true : false
+        shareBtn.isEnabled = (meme != nil) ? true : false
+        
         // the source controller can set a meme that should be updated
         if let meme = meme {
-            configureTextField(topText, meme.getTopText())
-            configureTextField(bottomText, meme.getBottomText())
+            configureTextField(topText, meme.getTopText(), isUpdate: true)
+            configureTextField(bottomText, meme.getBottomText(), isUpdate: true)
             
             imagePickerView.image = meme.getOriginalImage()
+            
+            updateModel()
+            
         } else {
             // new meme
-            configureTextField(topText, "Top")
-            configureTextField(bottomText, "Bottom")
+            configureTextField(topText, "Top", isUpdate: false)
+            configureTextField(bottomText, "Bottom", isUpdate: false)
             meme = Meme()
         }
         
@@ -177,11 +181,15 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     // MARK: - Utility functions
-    func configureTextField(_ textField: UITextField, _ placeholder: String) {
+    func configureTextField(_ textField: UITextField, _ placeholder: String, isUpdate: Bool) {
         textField.defaultTextAttributes = memeTextAttributes
         textField.delegate = self
         textField.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: memeTextAttributes)
         textField.textAlignment = .center
+        
+        if (isUpdate) {
+            textField.text = placeholder
+        }
     }
 
     func unwind() {
