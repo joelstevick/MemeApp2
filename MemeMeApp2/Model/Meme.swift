@@ -7,28 +7,28 @@
 
 import UIKit
 
-struct Meme {
+class Meme {
     private var topTextField: String?
     private var bottomTextField: String?
     private var originalImage: UIImage?
     private var memedImage: UIImage?
     
-    mutating func addTopTextField(_ topTextField: String)  {
+    func addTopTextField(_ topTextField: String)  {
         self.topTextField = topTextField
     }
     
-    mutating func addBottomTextField(_ bottomTextField: String) {
+    func addBottomTextField(_ bottomTextField: String) {
         self.bottomTextField = bottomTextField
     }
     
-    mutating func addOriginalImage(_ originalImage: UIImage) {
+    func addOriginalImage(_ originalImage: UIImage) {
         self.originalImage = originalImage
     }
     
     var hasOriginalImage: Bool {
         return !(originalImage === nil)
     }
-    mutating func reset() {
+    func reset() {
         topTextField = nil
         bottomTextField = nil
         originalImage = nil
@@ -44,7 +44,7 @@ struct Meme {
         return topTextField!.trimmingCharacters(in: .whitespacesAndNewlines).count > 0
         && bottomTextField!.trimmingCharacters(in: .whitespacesAndNewlines).count > 0
     }
-    mutating func build(_ view: UIView) -> UIImage {
+    func build(_ view: UIView) -> UIImage {
         guard isValid() else {
             fatalError("All properties are required!")
         }
