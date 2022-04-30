@@ -2,7 +2,7 @@
 //  CollectionViewControlller+UICollectionViewDataSource.swift
 //  MemeMeApp2
 //
-//  Created by Joel Stevick on 4/26/22.
+//  Created by Joel Stevick on 4/26/22
 //
 
 import UIKit
